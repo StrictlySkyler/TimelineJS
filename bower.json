@@ -12,9 +12,9 @@
     "components"
   ],
   "dependencies": {
-    "jquery": ">= 1.8.x"
+    "jquery": "latest"
   },
   "devDependencies": {
-    "jquery": ">= 1.8.x"
+    "jquery": "latest"
   }
 }
