@@ -573,7 +573,7 @@ if(typeof VMM != 'undefined') {
 	}
 	
 	// ADD ELEMENT AND RETURN IT
-	VMM.appendAndGetElement = function(append_to_element, tag, cName, content) {
+	VMM.appendAndGetElement = function(append_to_element, tag, cName, content, data) {
 		var e,
 			_tag		= "<div>",
 			_class		= "",
