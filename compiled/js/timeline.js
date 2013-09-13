@@ -578,7 +578,7 @@ if(typeof VMM != 'undefined') {
 			_tag		= "<div>",
 			_class		= "",
 			_content	= "",
-			_id			= data.uniqueid;
+			_id			= data? data.uniqueid : '';
 		
 		if (tag != null && tag != "") {
 			_tag = tag;
