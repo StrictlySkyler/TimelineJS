@@ -600,7 +600,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Timeline == 'undefined') {
 						_date.content			= "";
 						_date.tag				= data.date[i].tag;
 						_date.slug				= data.date[i].slug;
-						_date.uniqueid			= VMM.Util.unique_ID(7);
+						_date.uniqueid			= data.date[i].uuid || VMM.Util.unique_ID(7);
 						_date.classname			= data.date[i].classname;
 						
 						

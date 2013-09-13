@@ -578,7 +578,7 @@ if(typeof VMM != 'undefined') {
 			_tag		= "<div>",
 			_class		= "",
 			_content	= "",
-			_id			= "";
+			_id			= data.uniqueid;
 		
 		if (tag != null && tag != "") {
 			_tag = tag;
@@ -597,6 +597,7 @@ if(typeof VMM != 'undefined') {
 			e = jQuery(tag);
 			
 			e.addClass(_class);
+			e.attr('id', _id);
 			e.html(_content);
 			
 			jQuery(append_to_element).append(e);
@@ -5863,7 +5864,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 if (typeof VMM.Slider != 'undefined') {
 	VMM.Slider.Slide = function(d, _parent) {
 		
-		var $media, $text, $slide, $wrap, element, c,
+		var $media, $text, $slide, $wrap, c,
 			data		= d,
 			slide		= {},
 			element		= "",
@@ -7526,7 +7527,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Timeline == 'undefined') {
 						_date.content			= "";
 						_date.tag				= data.date[i].tag;
 						_date.slug				= data.date[i].slug;
-						_date.uniqueid			= VMM.Util.unique_ID(7);
+						_date.uniqueid			= data.date[i].uuid || VMM.Util.unique_ID(7);
 						_date.classname			= data.date[i].classname;
 						
 						
