@@ -600,7 +600,9 @@ if(typeof VMM != 'undefined') {
 			e.attr('id', _id);
 			e.html(_content);
 			
-			jQuery(append_to_element).append(e);
+			$(append_to_element).append(e);
+
+			$(document).trigger(_id, [e]);
 			
 		}
 		
