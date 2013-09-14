@@ -662,7 +662,9 @@ if(typeof VMM != 'undefined' && typeof VMM.Timeline == 'undefined') {
 					}
 				}
 				
-				_date.uniqueid		= VMM.Util.unique_ID(7);
+				_date.uniqueid		= data.date[i] ? 
+					data.date[i].uuid : 
+					VMM.Util.unique_ID(7);
 				_date.enddate		= _date.startdate;
 				_date.precisiondate	= do_start.precision;
 				_date.title			= data.headline;

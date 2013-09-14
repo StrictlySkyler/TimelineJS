@@ -578,7 +578,7 @@ if(typeof VMM != 'undefined') {
 			_tag		= "<div>",
 			_class		= "",
 			_content	= "",
-			_id			= data? data.uniqueid : '';
+			_id			= data ? data.uniqueid : VMM.Util.unique_ID(7);
 		
 		if (tag != null && tag != "") {
 			_tag = tag;
@@ -5884,7 +5884,7 @@ if (typeof VMM.Slider != 'undefined') {
 		this.id			= _id;
 		
 		
-		element		=	VMM.appendAndGetElement(_parent, "<div>", "slider-item");
+		element		=	VMM.appendAndGetElement(_parent, "<div>", "slider-item", null, data);
 		
 		if (typeof data.classname != 'undefined') {
 			trace("HAS CLASSNAME");
@@ -7589,7 +7589,9 @@ if(typeof VMM != 'undefined' && typeof VMM.Timeline == 'undefined') {
 					}
 				}
 				
-				_date.uniqueid		= VMM.Util.unique_ID(7);
+				_date.uniqueid		= data.date[i] ? 
+					data.date[i].uuid : 
+					VMM.Util.unique_ID(7);
 				_date.enddate		= _date.startdate;
 				_date.precisiondate	= do_start.precision;
 				_date.title			= data.headline;
