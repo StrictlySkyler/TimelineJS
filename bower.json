@@ -1,6 +1,6 @@
 {
   "name": "timelinejs",
-  "version": "2.26.0",
+  "version": "2.27.0",
   "main": ["compiled/js/storyjs-embed.js","compiled/js/timeline-min.js","compiled/css/timeline.css"],
   "repository": {
     "type": "git",
