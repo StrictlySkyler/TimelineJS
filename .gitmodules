@@ -3,4 +3,4 @@
 	url = https://StrictlySkyler@github.com/StrictlySkyler/StoryJS-Core.git
 [submodule "source/less/Core"]
 	path = source/less/Core
-	url = https://zachwise@github.com/VeriteCo/StoryJS-Core-CSS.git
+	url = git@github.com:NUKnightLab/StoryJS-Core-CSS.git

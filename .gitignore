@@ -14,4 +14,8 @@ compiled/css/timeline-generator.css
 *.tmproject
 tmtags
 source/gfx/Sprites/
+/node_modules
+*.pyc
 codekit-config.json
+build/website
+
