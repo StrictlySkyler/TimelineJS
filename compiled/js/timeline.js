@@ -6081,7 +6081,7 @@ if (typeof VMM.Slider != 'undefined') {
 				if (data.type == "start") {
 					c.text		+=	VMM.createElement("h2", VMM.Util.linkify_with_twitter(data.headline, "_blank"), "start");
 				} else { 
-					c.text		+=	VMM.createElement("h3", VMM.Util.linkify_with_twitter(data.headline, "_blank"));
+					c.text		+=	VMM.createElement("h3", VMM.Util.linkify_with_twitter(data.headline, "_blank"), "headline");
 				}
 			}
 			
@@ -6089,7 +6089,7 @@ if (typeof VMM.Slider != 'undefined') {
 			================================================== */
 			if (data.text != null && data.text != "") {
 				c.has.text		=  true;
-				c.text			+= VMM.createElement("p", VMM.Util.linkify_with_twitter(data.text, "_blank"));
+				c.text			+= VMM.createElement("p", VMM.Util.linkify_with_twitter(data.text, "_blank"), "text");
 			}
 			
 			if (c.has.text || c.has.headline) {
