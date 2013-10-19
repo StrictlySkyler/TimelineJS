@@ -5231,9 +5231,9 @@ if(typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 			
 			// Handle smaller sizes
 			if (VMM.Browser.device == "mobile" || current_width <= 640) {
-				config.slider.content.padding	= 10;
+				config.slider.content.padding	= 0;
 			} else {
-				config.slider.content.padding	= config.slider.content.padding_default;
+			config.slider.content.padding	= config.slider.content.padding_default;
 			}
 			
 			config.slider.content.width = current_width - (config.slider.content.padding *2);
