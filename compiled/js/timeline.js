@@ -5793,7 +5793,6 @@ if(typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 			
 			VMM.bindEvent(".nav-next", onNextClick);
 			VMM.bindEvent(".nav-previous", onPrevClick);
-			VMM.bindEvent(window, onKeypressNav, 'keydown');
 			
 		}
 		
