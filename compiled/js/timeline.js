@@ -5241,7 +5241,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 			VMM.Lib.width($slides_items, (slides.length * config.slider.content.width));
 			
 			if (_from_start) {
-				VMM.Lib.css($slider_container, "left", slides[current_slide].leftpos());
+				VMM.Lib.css($slider_container, "left", slides[config.current_slide].leftpos());
 			}
 			
 			// RESIZE SLIDES
@@ -5344,7 +5344,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 			}
 			if (typeof b.left == "number") {
 				var _pos = b.left;
-				var _slide_pos = -(slides[current_slide].leftpos());
+				var _slide_pos = -(slides[config.current_slide].leftpos());
 				if (_pos < _slide_pos - (config.slider_width/3)) {
 					onNextClick();
 				} else if (_pos > _slide_pos + (config.slider_width/3)) {
@@ -5664,7 +5664,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 			
 			// Set current slide
 			current_slide	= n;
-			_pos			= slides[current_slide].leftpos();
+			_pos			= slides[config.current_slide].leftpos();
 			
 			
 			if (current_slide == 0) {is_first = true};
@@ -5755,7 +5755,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Slider == 'undefined') {
 
 		function backToCurrentSlide() {
 			VMM.Lib.stop($slider_container);
-			VMM.Lib.animate($slider_container, config.duration, "easeOutExpo", {"left": -(slides[current_slide].leftpos()) +  config.slider.content.padding} );
+			VMM.Lib.animate($slider_container, config.duration, "easeOutExpo", {"left": -(slides[config.current_slide].leftpos()) +  config.slider.content.padding} );
 		}
 		
 		/* MESSEGES 
